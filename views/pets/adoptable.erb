@@ -1,0 +1,25 @@
+<h1>Adopt a pet</h1>
+<p>These pets are all ready for adoption. Check out each pet's details for more info and to give them their new forever home.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Photo</th>
+      <th>Type</th>
+      <th>Breed</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+<% for pet in @pets %>
+<tbody>
+  <tr>
+    <td><%= pet.name %></td>
+    <td><img src="/<%= pet.photo %>" height="300px" width="300px" ></td>
+    <td><%= pet.type %></td>
+    <td><%= pet.breed %></td>
+    <td> <a href="<%= pet.id %>">Details</a></td>
+  </tr>
+<% end %>
+</tbody>
+</table>

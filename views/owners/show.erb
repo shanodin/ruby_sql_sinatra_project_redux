@@ -1,0 +1,28 @@
+<h1>Owner Details</h1>
+<h2><%= @owner.name %></h2>
+<p>Phone Number: <%= @owner.phone_number %></p>
+
+<p><%= @owner.name %>'s Pets</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Breed</th>
+  </tr>
+<% for pet in @pets %>
+  <tr>
+    <td><%= pet.name %></td>
+    <td><%= pet.type %></td>
+    <td><%= pet.breed %></td>
+  </tr>
+<% end %>
+</table>
+
+<form action="/owners/<%= @owner.id %>/delete" method="post">
+<input type="submit" value="Remove This Owner" />
+</form>
+<br>
+<form action="/owners/<%= @owner.id %>/edit" method="post">
+<input type="submit" value="Update This Owner" />
+</form>

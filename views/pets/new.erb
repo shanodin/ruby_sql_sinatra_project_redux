@@ -1,0 +1,42 @@
+<h1>Add a new pet</h1>
+
+<form action="/pets" method="post">
+
+  <label for="name">Name:</label>
+  <input type="text" name="name" id="name" />
+<br><br>
+
+  <label for="type">Type:</label>
+  <input type="text" name="type" id="type" />
+<br><br>
+
+  <label for="breed">Breed:</label>
+  <input type="text" name="breed" id="breed" />
+<br><br>
+
+  <label for="can_adopt">Read for adoption?</label>
+  <input type="checkbox" name="can_adopt" id="can_adopt" value="true" />
+<br><br>
+
+  <label for="status">Status:</label>
+  <select id="status" name="status">
+    <option value="Ready For Adoption">Ready For Adoption</option>
+    <option value="At The Vet">At The Vet</option>
+    <option value="Adopted">Adopted</option>
+    <option value="In Evaluation">In Evaluation</option>
+    <option value="In Training">In Training</option>
+  </select>
+<br><br>
+
+<label for="photo">Photo:</label>
+<input type="text" name="photo" value="">
+
+<br><br>
+
+  <label for="admission_date">Admission Date:</label>
+  <input type="text" name="admission_date" id="admission_date" />
+<br><br>
+<input type="submit" value="Add New Pet">
+
+
+</form>

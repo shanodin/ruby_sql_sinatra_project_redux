@@ -1,0 +1,21 @@
+<h1>Pet Details</h1>
+<br>
+<h2><%= @pet.name %></h2>
+<br>
+<p><img src="/<%= @pet.photo %>"></p>
+<p>Type: <%= @pet.type %></p>
+<p>Breed: <%= @pet.breed %></p>
+<p>Status: <%= @pet.status %></p>
+<p>Ready for Adoption?: <%= @pet.can_adopt %></p>
+<p>Admission Date: <%= @pet.admission_date %></p>
+
+<% if @owner %>
+  <p>Owner: <a href="/owners/<%= @owner.id %>"><%= @owner.name %></a></p>
+<% else %>
+ <p>
+    Owner: None yet - Could it be you?
+ </p>
+<% end %>
+
+<p><a href="/pets/<%= @pet.id %>/delete">Delete this pet</a></p>
+<p><a href="/pets/<%= @pet.id %>/edit">Update this Pet</a></p>

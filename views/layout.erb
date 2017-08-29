@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css">
+    <meta charset="utf-8">
+    <title>Animal Shelter</title>
+  </head>
+  <body>
+    <div class="top-bar">
+
+    <a href="/"><img class="logo" src="/Shelter_Logo-color.png" alt="logo"></a>
+    <nav>
+      <ul>
+        <li><a href="/pets">View All Pets</a></li>
+        <li><a href="/pets/adoptable">Adopt a Pet</a></li>
+        <li><a href="/owners">View Owners</a></li>
+      </ul>
+    </nav>
+    </div>
+    <div class="main">
+
+
+    <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+<h1>Pet Owners</h1>
+
+<p><a href="/owners/new">Add a new owner</a></p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Phone Number</th>
+    <th>Details</th>
+  </tr>
+<% for owner in @owners %>
+  <tr>
+    <td><%= owner.name %></td>
+    <td><%= owner.phone_number %></td>
+    <td><a href="/owners/<%= owner.id %>">Details</a></td>
+  </tr>
+<% end %>
+</table>
