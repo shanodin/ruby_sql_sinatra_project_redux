@@ -1,10 +1,10 @@
 
 
 body{
-  background-color: #4ABDAC;
+  background-color: white;
 }
 h1{
-  color: white;
+  color: cornflowerblue;
   text-decoration: bold;
 }
 
@@ -26,19 +26,18 @@ nav li {
   float: right;
   display: flex;
   justify-content: space-around;
-  background: #F7B733;
-  border: 1px solid #aa8d56;
-  /*color: #F7B733;*/
+  background: cornflowerblue;
+  border: 1px solid darkblue;
   outline: medium none;
   padding: 15px;
   text-decoration: none;
 }
 nav li a{
-  color: #FC4A1A;
+  color: white;
 }
 
 table, th, tr, td {
-  border: 1px solid black;
+  border: 1px solid darkblue;
   border-collapse: collapse;
 }
 
@@ -48,16 +47,19 @@ table {
 }
 
 th {
-    background-color: #FC4A1A;
-    color: white;
-    height: 50px;
-    vertical-align: middle;
+  background-color: steelblue;
+  color: white;
+  height: 50px;
+  vertical-align: middle;
 }
 
 tr:nth-child(even){
-  background-color: #F7B733;
+  background-color: cornflowerblue;
 }
 
 td{
   text-align: center;
+  padding: 5px;
 }
+tr:nth-child(odd){
+  background-color: skyblue;
