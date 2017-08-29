@@ -12,8 +12,9 @@
       <th>Details</th>
     </tr>
   </thead>
+  <tbody>
 <% for pet in @pets %>
-<tbody>
+
   <tr>
     <td><%= pet.name %></td>
     <td><img src="/<%= pet.photo %>" height="300px" width="300px" ></td>

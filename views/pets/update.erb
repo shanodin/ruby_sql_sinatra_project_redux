@@ -14,10 +14,6 @@
   <input type="text" id="breed" name="breed" value="<%= @pet.breed %>">
 <br><br>
 
-<label for="admission_date">Admission Date:</label>
-<input type="text" id="admission_date" name="admission_date" value="<%= @pet.admission_date %>">
-<br><br>
-
   <label for="can_adopt">Ready for adoption?</label>
   <input type="checkbox" name="can_adopt" id="can_adopt" value="true" <%= 'checked' if @pet.status == "Ready for Adoption" %> />
 <br><br>

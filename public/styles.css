@@ -1,8 +1,7 @@
-
-
 body{
   background-color: white;
 }
+
 h1{
   color: cornflowerblue;
   text-decoration: bold;
@@ -63,3 +62,57 @@ td{
 }
 tr:nth-child(odd){
   background-color: skyblue;
+}
+
+div .pet_box{
+  display: flex;
+  flex-direction: row;
+  float: left;
+}
+
+div#pet_pic{
+  display: flex;
+  float: left;
+  clear: both;
+}
+
+div#pet_info{
+  background-color: skyblue;
+  width: 500px;
+  padding: 15px;
+  float: right;
+  clear: both;
+}
+
+div .update_delete{
+  width: 500px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+div .button{
+  background-color: #008CBA;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
+  width: 100px;
+  border: solid;
+  border-color: darkblue;
+  margin: 15px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+div .button a{
+  color: darkblue;
+}
+
+div .button:hover{
+  background-color: darkblue;
+}
+
+div .button:hover a{
+  color: #008CBA;
+}

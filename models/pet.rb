@@ -3,8 +3,8 @@ require_relative("owner")
 
 class Pet
 
-attr_accessor :name, :type, :breed, :can_adopt, :status, :admission_date, :owner_id, :photo
-attr_reader :id
+attr_accessor :name, :type, :breed, :can_adopt, :status, :owner_id, :photo
+attr_reader :id, :admission_date
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -31,13 +31,12 @@ attr_reader :id
       breed,
       can_adopt,
       status,
-      admission_date,
       owner_id,
       photo)
     VALUES
-      ($1, $2, $3, $4, $5, $6, $7, $8)
+      ($1, $2, $3, $4, $5, $6, $7)
     RETURNING *;"
-    values = [@name, @type, @breed, @can_adopt, @status, @admission_date, @owner_id, @photo]
+    values = [@name, @type, @breed, @can_adopt, @status, @owner_id, @photo]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -49,13 +48,12 @@ attr_reader :id
       breed,
       can_adopt,
       status,
-      admission_date,
       owner_id,
       photo)
         =
-      ($1, $2, $3, $4, $5, $6, $7, $8)
-    WHERE id = $9"
-    values = [@name, @type, @breed, @can_adopt, @status, @admission_date, @owner_id, @photo, @id]
+      ($1, $2, $3, $4, $5, $6, $7)
+    WHERE id = $8"
+    values = [@name, @type, @breed, @can_adopt, @status, @owner_id, @photo, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -64,7 +62,7 @@ attr_reader :id
   end
 
   def self.all()
-    sql = "SELECT * FROM pets;"
+    sql = "SELECT * FROM pets ORDER BY admission_date;"
     pet_data = SqlRunner.run( sql, [] )
     return map_items(pet_data)
   end

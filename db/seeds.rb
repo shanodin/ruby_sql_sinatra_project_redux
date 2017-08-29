@@ -32,7 +32,7 @@ pet1 = Pet.new({
   'breed' => 'moggie',
   'can_adopt' => 'true',
   'status' => 'Ready for Adoption',
-  'admission_date' => '25/08/2017',
+  # 'admission_date' => '25/08/2017',
   'photo' => 'zeus.jpg'
   })
 pet1.save
@@ -43,7 +43,7 @@ pet2 = Pet.new({
   'breed' => 'Spaniel',
   'can_adopt' => 'false',
   'status' => 'Adopted',
-  'admission_date' => '25/08/2017',
+  # 'admission_date' => '25/08/2017',
   'owner_id' => owner1.id,
   'photo' => 'reilly.jpg'
   })
@@ -55,7 +55,7 @@ pet3 = Pet.new({
   'breed' => 'Bearded Dragon',
   'can_adopt' => 'false',
   'status' => 'At the Vet',
-  'admission_date' => '25/08/2017',
+  # 'admission_date' => '25/08/2017',
   'photo' => 'puppy.jpg'
   })
 pet3.save
@@ -66,7 +66,7 @@ pet4 = Pet.new({
   'breed' => 'Rag Doll',
   'can_adopt' => 'true',
   'status' => 'Ready for Adoption',
-  'admission_date' => '25/08/2017',
+  # 'admission_date' => '25/08/2017',
   'photo' => 'sinclair.jpg'
   })
 pet4.save

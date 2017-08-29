@@ -46,7 +46,7 @@ get "/pets/:id" do
 end
 
 ##### delete pet
-post '/pets/:id/delete' do
+get '/pets/:id/delete' do
   @pet = Pet.find(params[:id])
   @pet.delete
   redirect to '/pets'
