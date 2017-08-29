@@ -94,7 +94,7 @@ attr_reader :id, :admission_date
   end
 
   def self.adoptable()
-    sql = "SELECT * FROM pets WHERE can_adopt = 'true';"
+    sql = "SELECT * FROM pets WHERE status = 'Ready for Adoption';"
     results = SqlRunner.run( sql, [] )
     return map_items(results)
   end

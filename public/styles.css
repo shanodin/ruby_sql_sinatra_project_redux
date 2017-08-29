@@ -97,12 +97,13 @@ div .button{
   flex-direction: row;
   justify-content: space-around;
   padding: 5px;
-  width: 100px;
-  border: solid;
+  width: 150px;
+  border: solid 2px;
   border-color: darkblue;
   margin: 15px;
   border-radius: 10px;
   white-space: nowrap;
+  text-align: center;
 }
 
 div .button a{
@@ -111,8 +112,42 @@ div .button a{
 
 div .button:hover{
   background-color: darkblue;
+  border-color: #008CBA;
 }
 
 div .button:hover a{
   color: #008CBA;
+}
+
+h2{
+  font-size: 60px;
+}
+
+input[type=text] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus{
+  background-color: cornflowerblue;
+}
+
+input[type=submit]{
+  background-color: #008CBA;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 5px;
+  width: 100px;
+  border: solid;
+  border-color: darkblue;
+  margin: 15px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+input[type=submit]:hover{
+  color: #008CBA;
+  background-color: darkblue;
 }
