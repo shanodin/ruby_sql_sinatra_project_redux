@@ -1,12 +1,11 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require("sinatra/reloader") if development?
+require('sinatra/reloader') if development?
 require('pry-byebug')
-require("pry")
-require_relative("../models/owner.rb")
-require_relative("../models/pet.rb")
-require_relative("../models/sql_runner.rb")
-
+require('pry')
+require_relative('../models/owner.rb')
+require_relative('../models/pet.rb')
+require_relative('../models/sql_runner.rb')
 
 ######## show all pets
 get '/pets' do
@@ -16,7 +15,7 @@ end
 
 ##### ready for Adoption
 get '/pets/adoptable' do
-  @pets = Pet.adoptable()
+  @pets = Pet.adoptable
   erb(:"pets/adoptable")
 end
 
@@ -26,24 +25,21 @@ get '/pets/new' do
 end
 
 ##### add new pet to database
-post "/pets" do
+post '/pets' do
   @pet = Pet.new(params)
   @pet.save
-  redirect to "/pets"
+  redirect to '/pets'
 end
 
-
-
 ###### view individual pet
-get "/pets/:id" do
+get '/pets/:id' do
   @pet = Pet.find(params[:id])
   owner_id = @pet.owner_id
-  puts "ONWER ID #{owner_id}"
-  if owner_id
-    @owner = Owner.find(owner_id)
-  else
-    @owner = false
-  end
+  @owner = if owner_id
+             Owner.find(owner_id)
+           else
+             false
+           end
   erb(:"pets/show")
 end
 
@@ -58,7 +54,6 @@ end
 get '/pets/:id/edit' do
   @pet = Pet.find(params[:id])
   @owners = Owner.all
-
   erb(:"pets/update")
 end
 

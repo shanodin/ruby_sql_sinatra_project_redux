@@ -1,9 +1,22 @@
 <h1>Adopt a pet</h1>
 <p>These pets are all ready for adoption. Check out each pet's details for more info and to give them their new forever home.</p>
 
-<table>
+<p>Filter available pets:</p>
+
+<input type="checkbox" name="Dog" id="Dog" class="tablefilter" checked>
+<label for="Dog">Dog</label>
+<input type="checkbox" name="Cat" id="Cat" class="tablefilter" checked>
+<label for="Cat">Cat</label>
+<input type="checkbox" name="Rabbit" id="Rabbit" class="tablefilter" checked>
+<label for="Rabbit">Rabbit</label>
+<input type="checkbox" name="SmallAnimal" id="SmallAnimal" class="tablefilter" checked>
+<label for="SmallAnimal">Small Animal</label>
+<input type="checkbox" name="ExoticAnimal" id="ExoticAnimal" class="tablefilter" checked>
+<label for="ExoticAnimal">Exotic Animal</label>
+
+<table class="filteredtable">
   <thead>
-    <tr>
+    <tr class="th">
       <th>Name</th>
       <th>Photo</th>
       <th>Type</th>
@@ -15,7 +28,7 @@
   <tbody>
 <% for pet in @pets %>
 
-  <tr>
+  <tr class = "<%= pet.type.delete(' ') %>">
     <td><%= pet.name %></td>
     <td><img src="/<%= pet.photo %>" height="300px" width="300px" ></td>
     <td><%= pet.type %></td>

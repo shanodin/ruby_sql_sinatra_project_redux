@@ -1,5 +1,5 @@
-  <h1>Pet Details</h1>
-  <h2><%= @pet.name %></h2>
+<h1>Pet Details</h1>
+<h2><%= @pet.name %></h2>
 
 <div class="pet_box">
   <div id="pet_pic">
@@ -8,22 +8,33 @@
 
   <div id="pet_info">
 
-    <p>Type: <%= @pet.type %></p>
-    <p>Breed: <%= @pet.breed %></p>
-    <p>Status: <%= @pet.status %></p>
-    <p>Ready for Adoption?: <%= @pet.can_adopt %></p>
-    <p>Admission Date: <%= @pet.admission_date %></p>
+    <p>Type:
+      <%= @pet.type %></p>
+    <p>Breed:
+      <%= @pet.breed %></p>
+    <p>Status:
+      <%= @pet.status %></p>
+    <p>Ready for Adoption?:
+      <%= @pet.can_adopt %></p>
+    <p>Admission Date:
+      <%= @pet.admission_date %></p>
     <% if @owner %>
-      <p>Owner: <a href="/owners/<%= @owner.id %>"><%= @owner.name %></a></p>
-    <% else %>
-     <p>
-        Owner: None yet - Could it be you?
-     </p>
+    <p>Owner:
+      <a href="/owners/<%= @owner.id %>"><%= @owner.name %></a>
+    </p>
+  <% else %>
+    <p>
+      Owner: None yet - Could it be you?
+    </p>
     <% end %>
   </div>
 </div>
 
 <div class="update_delete">
-  <div class="button"><a href="/pets/<%= @pet.id %>/delete">Delete this pet</a></div>
-  <div class="button"><a href="/pets/<%= @pet.id %>/edit">Update this Pet</a></div>
+  <div class="button">
+    <a href="/pets/<%= @pet.id %>/delete">Delete this pet</a>
+  </div>
+  <div class="button">
+    <a href="/pets/<%= @pet.id %>/edit">Update this Pet</a>
+  </div>
 </div>

@@ -6,13 +6,17 @@
     <th>Phone Number</th>
     <th>Details</th>
   </tr>
-<% for owner in @owners %>
+  <% for owner in @owners %>
   <tr>
     <td><%= owner.name %></td>
     <td><%= owner.phone_number %></td>
-    <td><a href="/owners/<%= owner.id %>">Details</a></td>
+    <td>
+      <a href="/owners/<%= owner.id %>">Details</a>
+    </td>
   </tr>
-<% end %>
+  <% end %>
 </table>
 
-<div class="button"><a href="/owners/new">Add a new owner</a></div>
+<div class="button">
+  <a href="/owners/new">Add a new owner</a>
+</div>
