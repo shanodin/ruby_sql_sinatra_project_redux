@@ -39,7 +39,7 @@ get '/owners/:id/delete' do
 end
 
 ##### give update owner form
-post '/owners/:id/edit' do
+get '/owners/:id/edit' do
   @owner = Owner.find(params[:id])
   erb(:"owners/update")
 end
