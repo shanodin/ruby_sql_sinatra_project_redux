@@ -1,0 +1,45 @@
+
+<input type="checkbox" class="tablefilter" name="class1" id="class1" checked />
+<label for="class1">Class1</label>
+<input type="checkbox" class="tablefilter" name="class2" id="class2" checked />
+<label for="class2">Class2</label>
+<input type="checkbox" class="tablefilter" name="class3" id="class3" checked />
+<label for="class3">Class3</label>
+
+<!-- Table -->
+<table class="table table-bordered table-striped filteredtable">
+    <thead>
+        <tr class="class1">
+            <td>Column 1</td>
+            <td>Column 2</td>
+            <td>Filtered Column</td>
+            <td>Column 3</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="class1">
+            <td>Test</td>
+            <td>Test</td>
+            <td>Class1</td>
+            <td>Test</td>
+        </tr>
+        <tr class="class1 class2">
+            <td>Test</td>
+            <td>Test</td>
+            <td>Class1 & Class2</td>
+            <td>Test</td>
+        </tr>
+        <tr class="class2">
+            <td>Test</td>
+            <td>Test</td>
+            <td>Class2</td>
+            <td>Test</td>
+        </tr>
+        <tr class="class1 class3">
+            <td>Test</td>
+            <td>Test</td>
+            <td>Class1 & Class3</td>
+            <td>Test</td>
+        </tr>
+    </tbody>
+</table>

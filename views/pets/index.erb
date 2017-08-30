@@ -2,21 +2,39 @@
 
 <div class="button"><a href="/pets/new">Add a new pet</a></div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Photo</th>
-    <th>Type</th>
-    <th>Admission Date</th>
-    <th>Details</th>
-  </tr>
-<% for pet in @pets %>
-  <tr>
-    <td><%= pet.name %></td>
-    <td><img src="/<%= pet.photo %>" height="300px" width="300px" ></td>
-    <td><%= pet.type %></td>
-    <td><%= pet.admission_date %></td>
-    <td> <a href="pets/<%= pet.id %>">Details</a></td>
-  </tr>
-<% end %>
+
+
+<input type="checkbox" name="Dog" id="Dog" class="tablefilter" checked>
+<label for="Dog">Dog</label>
+<input type="checkbox" name="Cat" id="Cat" class="tablefilter" checked>
+<label for="Cat">Cat</label>
+<input type="checkbox" name="Rabbit" id="Rabbit" class="tablefilter" checked>
+<label for="Rabbit">Rabbit</label>
+<input type="checkbox" name="SmallAnimal" id="SmallAnimal" class="tablefilter" checked>
+<label for="SmallAnimal">Small Animal</label>
+<input type="checkbox" name="ExoticAnimal" id="ExoticAnimal" class="tablefilter" checked>
+<label for="ExoticAnimal">Exotic Animal</label>
+
+
+<table class="filteredtable">
+  <thead>
+    <tr class="th">
+      <th>Name</th>
+      <th>Photo</th>
+      <th>Type</th>
+      <th>Admission Date</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for pet in @pets %>
+      <tr class = "<%= pet.type.delete(' ') %>">
+        <td><%= pet.name %></td>
+        <td><img src="/<%= pet.photo %>" height="300px" width="300px" ></td>
+        <td><%= pet.type %></td>
+        <td><%= pet.admission_date %></td>
+        <td> <a href="pets/<%= pet.id %>">Details</a></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>

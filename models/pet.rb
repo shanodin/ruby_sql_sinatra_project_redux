@@ -99,4 +99,10 @@ attr_reader :id, :admission_date
     return map_items(results)
   end
 
+  def self.find_by_type(type)
+    sql = "SELECT * FROM pets WHERE type = $1;"
+    results = SqlRunner.run( sql, [type] )
+    return map_items(results)
+  end
+
 end

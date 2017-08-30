@@ -10,7 +10,13 @@
 <br><br>
 
   <label for="type">Type:</label>
-  <input type="text" id="type" name="type" value="<%= @pet.type %>">
+  <select id="type" name="type">
+    <option value="Dog" <%= 'selected' if 'Dog' == @pet.type %>>Dog</option>
+    <option value="Cat" <%= 'selected' if 'Cat' == @pet.type %>>Cat</option>
+    <option value="Rabbit" <%= 'selected' if 'Rabbit' == @pet.type %>>Rabbit</option>
+    <option value="Small Animal" <%= 'selected' if 'Small Animal' == @pet.type %>>Small Animal</option>
+    <option value="Exotic Animal" <%= 'selected' if 'Exotic Animal' == @pet.type %>>Exotic Animal</option>
+  </select>
 <br><br>
 
   <label for="breed">Breed:</label>
@@ -19,7 +25,7 @@
 
 </fieldset>
 <fieldset>
-  
+
   <label for="can_adopt">Ready for adoption?</label>
   <input type="checkbox" name="can_adopt" id="can_adopt" value="true" <%= 'checked' if @pet.status == "Ready for Adoption" %> />
 <br><br>

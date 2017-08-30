@@ -32,6 +32,8 @@ post "/pets" do
   redirect to "/pets"
 end
 
+
+
 ###### view individual pet
 get "/pets/:id" do
   @pet = Pet.find(params[:id])

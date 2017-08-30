@@ -28,7 +28,7 @@ owner4.save()
 
 pet1 = Pet.new({
   'name' => 'Zeus',
-  'type' => :cat,
+  'type' => 'Cat',
   'breed' => 'moggie',
   'can_adopt' => 'true',
   'status' => 'Ready for Adoption',
@@ -39,7 +39,7 @@ pet1.save
 
 pet2 = Pet.new({
   'name' => 'Reilly',
-  'type' => :dog,
+  'type' => 'Dog',
   'breed' => 'Spaniel',
   'can_adopt' => 'false',
   'status' => 'Adopted',
@@ -51,7 +51,7 @@ pet2.save
 
 pet3 = Pet.new({
   'name' => 'Puppy',
-  'type' => :lizard,
+  'type' => 'Exotic Animal',
   'breed' => 'Bearded Dragon',
   'can_adopt' => 'false',
   'status' => 'At the Vet',
@@ -62,7 +62,7 @@ pet3.save
 
 pet4 = Pet.new({
   'name' => 'Sinclair',
-  'type' => :cat,
+  'type' => 'Cat',
   'breed' => 'Rag Doll',
   'can_adopt' => 'true',
   'status' => 'Ready for Adoption',
