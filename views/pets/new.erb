@@ -3,11 +3,11 @@
 <form action="/pets" method="post">
 
   <label for="name">Name:</label>
-  <input type="text" name="name" id="name" />
+  <input type="text" name="name" id="name" required/>
 <br><br>
 
   <label for="type">Type:</label>
-  <select id="type" name="type">
+  <select id="type" name="type" required>
     <option value="Dog">Dog</option>
     <option value="Cat">Cat</option>
     <option value="Rabbit">Rabbit</option>
@@ -17,7 +17,7 @@
 <br><br>
 
   <label for="breed">Breed:</label>
-  <input type="text" name="breed" id="breed" />
+  <input type="text" name="breed" id="breed" required />
 <br><br>
 
   <label for="can_adopt">Read for adoption?</label>
@@ -25,7 +25,7 @@
 <br><br>
 
   <label for="status">Status:</label>
-  <select id="status" name="status">
+  <select id="status" name="status" required>
     <option value="Ready for Adoption">Ready for Adoption</option>
     <option value="At The Vet">At The Vet</option>
     <option value="Adopted">Adopted</option>
