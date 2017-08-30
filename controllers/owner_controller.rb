@@ -32,7 +32,7 @@ get '/owners/:id' do
 end
 
 ##### delete owner
-post '/owners/:id/delete' do
+get '/owners/:id/delete' do
   @owner = Owner.find(params[:id])
   @owner.delete
   redirect to '/owners'
